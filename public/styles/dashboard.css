@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Gordita:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gordita';
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #04233F;
+    height: 8vh;
+    padding: 1vh;
+}
+
+body{min-height: 100vh; background: #F9F8EA;}
+.navigation{
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    border-bottom-right-radius: 20px;
+    box-sizing: initial;
+    background: #42596A;
+    transition: 0.5s;
+    overflow-x:hidden;
+}
+.navigation.active{width: 300px;}
+.navigation ul{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 2vh;
+}
+.navigation ul li{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li.active{background: #F9F8EA;}
+.navigation ul li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background:#F9F8EA;
+    display: none;
+}
+.navigation ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background:#42596A;
+}
+.navigation ul li b:nth-child(2){
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background:#F9F8EA;
+    display: none;
+}
+.navigation ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background:#42596A;
+}
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2){
+    display: block;
+}
+.navigation ul li a{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #F9F8EA;
+}
+.navigation ul li.active a{color: #111A45; font-weight: 800;}
+.navigation ul li a .icon{
+    position: relative;
+    display: inline-block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{font-size: 1.5em;}
+.navigation ul li a .title{
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+.topnav.toggle{
+    position: fixed;
+    float: left;
+}
+
+.toggle.active{left: 5vh;}
+.toggle ion-icon{
+    position: absolute;
+    color: #F9F8EA;
+    font-size: 6vh;
+    display: none;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close{
+    display: block;
+}
+.toggle ion-icon.close,
+.toggle.active ion-icon.open{
+    display: none;
+}
+
+.logo{
+    position: relative;
+    height: 5vh;
+    left: 9vh;
+    top: 0.7vh;
+}
+
+.navigation ul#members {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 12vh;
+    padding-top: 0;
+}
+.navigation ul#members li.active{background: #F9F8EA;}
+.navigation ul#members li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background:#F9F8EA;
+    display: none;
+}
+.navigation ul#members li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background:#42596A;
+}
+.navigation ul#members li b:nth-child(2){
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background:#F9F8EA;
+    display: none;
+}
+.navigation ul#members li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background:#42596A;
+}
+.navigation ul#members li.active b:nth-child(1),
+.navigation ul#members li.active b:nth-child(2){
+    display: block;
+}
+ul#members li a::before{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #F9F8EA;
+}
+ul#members li.active a{color: #111A45; font-weight: 800;}
+ul#members li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+ul#members li a .icon ion-icon{font-size: 1.5em;}
+ul#members li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}

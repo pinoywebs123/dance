@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+  }
+  h1 {text-align:center; margin:100px auto;
+  font-weight:200;
+  font-size:70px;}
+  body {
+    font-family: 'Electrolize', sans-serif;
+    background: 
+    -webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
+   -webkit-linear-gradient(-5deg, rgba(120, 155, 255, 0.9) 50%, rgba(55, 230, 235, 1) 0%);
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+ 
+  .navigation{
+      position: fixed;
+      top: 0px;
+      left: 50%;
+      bottom: 0px;
+      width: 70px;
+      box-sizing: initial;
+      background: #F9F8EA;
+      transition: 0.5s;
+      overflow-x:hidden;
+      transform: skew(-5deg);
+  }
+  .navigation{width: 100px;}
+  .navigation ul{
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      left: 0px;
+      width: 70%;
+      padding-left: 0px;
+      padding-top: 0px;
+  }
+  .navigation ul li{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-left: 10px;
+  }
+.navigation ul li::before{
+      content: "";
+    position: absolute;
+    top: 0;
+    right: -21px;
+    height: 41.5px;
+    width: 42px;
+    background: inherit;
+    transform: translateY(9px) rotate(45deg);
+  }
+  .navigation ul li.active{background: #04233F;}
+  .navigation ul li b:nth-child(1){
+      position: relative;
+      top: -20px;
+      height: 20px;
+      width: 100%;
+      background:#04233F;
+      display: none;
+  }
+
+  .navigation ul li a{
+      position: relative;
+      display: block;
+      width: 100%;
+      display: flex;
+      text-decoration: none;
+      color: #111A45;
+  }
+  .navigation ul li.active a{color: #F9F8EA;}
+  .navigation ul li a .icon{
+      position: relative;
+      display: block;
+      min-width: 60px;
+      height: 60px;
+      line-height: 70px;
+      text-align: center;
+  }
+  .navigation ul li a .title{
+      position: relative;
+      display: block;
+      padding-left: 10px;
+      height: 60px;
+      line-height: 60px;
+      white-space: normal;
+  
+  }
