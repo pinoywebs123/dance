@@ -19,13 +19,13 @@
             <span  class="icon">
                 <ion-icon name="person-circle-outline"></ion-icon>
             </span>
-            <input type="text" class="title" placeholder="Username" name="email">
+            <input type="text" class="title" placeholder="Username" name="email" required>
             </div>
             <div class="input">
             <span  class="icon">
                 <ion-icon name="lock-closed-outline"></ion-icon>
             </span>
-            <input type="password" class="title" placeholder="Password" name="password">
+            <input type="password" class="title" placeholder="Password" name="password" required>
         </div>
         <button type="submit">Let's go</button>
         <br>
