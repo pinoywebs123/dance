@@ -1,18 +1,269 @@
-html {
-    height: 100%;
-  }
-  h1 {text-align:center; margin:100px auto;
-  font-weight:200;
-  font-size:70px;}
-  body {
-    font-family: 'Electrolize', sans-serif;
-    background: 
-    -webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
-   -webkit-linear-gradient(-5deg, rgba(120, 155, 255, 0.9) 50%, rgba(55, 230, 235, 1) 0%);
+*{
+    background-color: #04233F;
+    color: #F9F8EA;    
+    font-family: Gordita, sans-serif;
+}
+
+p{
+    margin-left: 20px;
+}
+
+/*Area of images*/
+body {
+    padding: 0%;
+    margin: 0%;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
- 
+  .container{
+    width: 75vh;
+    position: fixed;
+    right: 0;
+    overflow: hidden;
+}
+
+/*Area of images*/
+.wrapper{
+    width: 20px;
+    animation: slide 16s infinite;
+    position: fixed;
+}
+
+img{
+    height: 100vh;    
+   clip-path: polygon(11.5% 0, 100% 0, 100% 100%, 0 100%);
+}
+/*Animation activated by keyframes*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+    iframe[name="left-side"]{
+        position: fixed;
+        transform: translate(5%,0);
+        width: 90vh;
+        height: 100vh;
+        overflow: hidden;
+        border: none;
+        padding-bottom: 50px;
+    }
+
+    .login{
+        text-align: center;
+        color: #F9F8EA;
+        width: auto;
+        transform: translate(0, 25%);
+    }
+
+    .login ion-icon{
+        font-size: 25px;
+    }
+
+    input{
+        border: 0;
+        text-align: center;
+        font-size: 20px; 
+    }
+
+    input::placeholder{
+        font-size: 18px;
+        color: #F9F8EA;
+    }
+    .input{
+        position: relative;
+        border-bottom: 1px solid #F9F8EA;
+        margin-bottom: 5vh;
+        width: 45vh;
+        overflow: hidden;
+        transform: translateX(50%);
+    }
+
+    h1{
+        font-size: 10vh;
+        font-weight: 900;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+
+    button{
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #04233F;
+        border-radius: 50px;
+        background-color: #F9F8EA;
+        border: 0;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    button a{
+        color: #04233F;
+        background-color: #F9F8EA;
+    }
+
+    h2{
+        font-family: Bebas Neue;
+        color: #F6E4AF;
+        font-size: 10vh;
+        margin-bottom: 0;
+    }
+    .apply{
+        background-color: white;
+        color: #04233F;
+        border-radius: 27px;
+        padding: 8vh;
+        padding-bottom: 5vh;
+    }
+    .apply input{
+        background-color: inherit;
+        border: 0;
+        border-bottom: 2px solid #04233F;
+        width: 35vh;
+        color: #04233F;
+        text-align: left;
+        margin-bottom: 1vh;
+    }
+
+    select{
+        color: #969bb1;
+        font-family: Gordita, sans-serif;
+        border: none;
+        background-color: inherit;
+        font-size: 18px;
+        border-bottom: 2px solid #04233F;
+        width: 35vh;
+        margin-bottom: 1vh;
+    }
+
+    .apply input::placeholder{color: #969BAF;
+        text-align: left;}
+
+   .apply input.long-reg{width: 100%;}
+   input[type='number'] {
+    -moz-appearance:textfield;
+   }
+
+   .apply2{
+    background-color: white;
+   }
+
+   .apply2 p{
+    background-color: white;
+    color: #111A45;
+   }
+
+   .apply2 h3{
+    background-color: inherit;
+    color: #111A45;
+    font-size: 5vh;
+    font-family: Bebas Neue;
+    text-align: center;
+   }
+
+   .apply3{
+    text-align: center;
+    background-color: white;
+   }
+
+   .apply3 h3{
+    background-color: white;
+    font-size: 5vh;
+    color: #111A45;
+   }
+
+   .apply3 ion-icon{
+    font-size: 20vh;
+    background-color: white;
+    color: #111A45;
+   }
+
+   .apply3 p{
+    background-color: white;
+    color: #111A45;
+   }
+
+   .apply a{
+    text-decoration: none;
+    color: #F9F8EA;
+   }
+
+   .about{
+       text-indent: 15%;
+       font-size: larger;
+   }
+
+    /*FAQS*/
+
+    .faq{
+        color: #04233F;
+        background-color: #F9F8EA;
+        box-shadow: rgb(246, 228, 175) -5px -5px;
+        border-radius: 50px;
+        width: max-content;
+        padding: 2vh;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    ion-icon.social{
+        font-size: 8vh;
+        vertical-align: middle;
+        margin-right: 5vh;
+    }
+
+    .social-links{
+        font-size: 20px;
+        margin-left: 5vh;
+        margin-bottom: 5vh;
+    }
+    
+
+    
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+    .apply button{
+        background-color: #04233F;
+        color: #F9F8EA;
+        font-size: 18px;
+        position: relative;
+        left: 15%;
+        margin-top: 3vh;
+        margin-bottom: 0;
+        padding-left: 10vh;
+        padding-right: 10vh;
+    }
+
+  
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
   .navigation{
       position: fixed;
       top: 0px;
@@ -21,25 +272,31 @@ html {
       width: 70px;
       box-sizing: initial;
       background: #F9F8EA;
-      transition: 0.5s;
-      overflow-x:hidden;
+      overflow:hidden;
       transform: skew(-5deg);
+      opacity: 0.71;   
+      font-size: 15px;
   }
   .navigation{width: 100px;}
   .navigation ul{
-      position: relative;
+      position: fixed;
       display: inline-block;
-      top: 30%;
+      top: 35%;
       left: 0px;
       width: 70%;
       padding-left: 0px;
       padding-top: 0px;
+      transform: skew(5deg);
+      text-align: right;
+      opacity: 1;
   }
+
   .navigation ul li{
       position: relative;
       display: inline-block;
       width: 100%;
       padding-left: 10px;
+      
   }
 .navigation ul li::before{
       content: "";
@@ -70,7 +327,7 @@ html {
       color: #111A45;
   }
   .navigation ul li.active a{color: #F9F8EA;}
-  .navigation ul li a .icon{
+  .navigation ul li a{
       position: relative;
       display: block;
       min-width: 60px;
