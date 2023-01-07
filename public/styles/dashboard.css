@@ -653,9 +653,9 @@ video{
 .coach-table{
     width: 600px;
 }
-
+/*
 .sub-members{
-    padding-left: 100px;
+    display: block;
 }
 
 .sub-members a{    

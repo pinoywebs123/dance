@@ -19,7 +19,7 @@
             <span  class="icon">
                 <ion-icon name="person-circle-outline"></ion-icon>
             </span>
-            <input type="text" class="title" placeholder="Username" name="email" required>
+            <input type="text" class="title" placeholder="Email" name="email" required>
             </div>
             <div class="input">
             <span  class="icon">
