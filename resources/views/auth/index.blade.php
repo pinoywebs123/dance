@@ -20,7 +20,7 @@
 			   </div>
 			
 			</div>
-		<iframe name="left-side" src="{{url('login')}}"></iframe>
+		<!-- <iframe name="left-side" src="{{url('login')}}"></iframe> -->
 
 		
 		<div class="navigation">

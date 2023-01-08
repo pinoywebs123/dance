@@ -57,6 +57,7 @@ class AuthController extends Controller
             Auth::logout();
             return redirect('/login');
         }
+            echo("<meta http-equiv='refresh' content='1'>");
             if(Auth::user()->role_id == 1)
             {
                 return redirect()->route('admin_home');
