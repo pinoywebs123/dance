@@ -14,6 +14,7 @@
     <div class="announcement">
         <h1>ANNOUNCEMENT</h1>
 
+            @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
             <div class="import-items">
                 <a href="{{route('admin_announcement_new')}}" style="text-decoration: none; color:black">
                     <span class="icon">
@@ -22,6 +23,8 @@
                     <span class="title">Add Announcement</span>
                 </a>
             </div>
+
+            @endif
 
              <br>
               <br>

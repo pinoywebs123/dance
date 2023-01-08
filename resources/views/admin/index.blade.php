@@ -19,7 +19,7 @@
         </div>
         <img src="{{URL::to('/public/img/Prime.png')}}" class="logo">
 
-        <div class="hey"><a href="/profile.html" target="right-side" style="text-decoration: none;">
+        <div class="hey"><a href="{{route('admin_profile')}}" target="right-side" style="text-decoration: none;">
             <img src="{{URL::to('/public/img/dp.JPG')}}">
             <span style="color: #F9F8EA;">{{Auth::user()->name}}</span>
         </a></div>
@@ -90,7 +90,8 @@
                     <span class="title">Dance class</span>
                 </a>
             </li>
-    
+            
+            @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
             <li class="list">
                 <b></b>
                 <b></b>
@@ -101,6 +102,8 @@
                     <span class="title">Auditionees</span>
                 </a>
             </li>
+
+            @endif
         </ul>
             
 

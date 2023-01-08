@@ -65,4 +65,6 @@ Route::group(['prefix'=> 'dashboard'], function(){
     Route::post('/announcement-check', [AdminController::class, 'announcement_new_check'])->name('admin_announcement_new_check');
     Route::get('/announcement-archive/{id}', [AdminController::class, 'announcement_archive'])->name('admin_announcement_archive');
 
+    Route::get('/profile', [AdminController::class, 'profile'])->name('admin_profile');
+
 });
