@@ -18,6 +18,10 @@ Route::get('/apply', [AuthController::class, 'apply'])->name('apply');
 Route::post('/apply-check', [AuthController::class, 'apply_check'])->name('apply_check');
 Route::post('/apply', [AuthController::class, 'check_apply'])->name('check_apply');
 Route::get('/forgot', [AuthController::class, 'forgot'])->name('forgot');
+Route::post('/forgot-check', [AuthController::class, 'forgot_check'])->name('forgot_check');
+Route::get('/new-password/{token}', [AuthController::class, 'new_password'])->name('new_password');
+Route::post('/new-password-check', [AuthController::class, 'new_password_check'])->name('new_password_check');
+
 
 Route::get('/about', function(){
     return view('auth.about');
@@ -25,9 +29,7 @@ Route::get('/about', function(){
 Route::get('/faqs', function(){
     return view('auth.faqs');
 })->name('faqs');
-Route::get('/new-password', function(){
-    return view('auth.new_password');
-})->name('new_password');
+
 Route::get('/success', function(){
     return view('auth.register_success');
 })->name('success');

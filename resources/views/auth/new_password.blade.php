@@ -11,15 +11,38 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="login">
+    <form class="login" action="{{route('new_password_check')}}" method="POST">
+      @csrf  
     <h1>Change your Password</h1>
     <div class="input">
-        <input type="password" class="title" placeholder="New Password">
+        <input type="password" class="title" placeholder="New Password" name="password" required>
         </div>
         <div class="input">
-        <input type="password" class="title" placeholder="Confirm Password">
+        <input type="password" class="title" placeholder="Confirm Password" name="repeat_password" required>
+        <input type="hidden" name="token" value="{{Request::segment(2)}}">
     </div>
-    <button type="submit"><a href="login.html" target="left-side">Done</a></button>
+    <button type="submit">Done</button>
     </form>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+    @if(Session::has('success'))
+        Swal.fire({
+          icon: 'success',
+          title: 'Oops...',
+          text: '{{Session::get('success')}}',
+          
+        })
+    @endif
+
+
+    @if(Session::has('error'))
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: '{{Session::get('error')}}',
+          
+        })
+    @endif
+</script>
 </html>

@@ -39,4 +39,25 @@
             </button>
         </form>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+    @if(Session::has('success'))
+        Swal.fire({
+          icon: 'success',
+          title: 'Oops...',
+          text: '{{Session::get('success')}}',
+          
+        })
+    @endif
+
+
+    @if(Session::has('error'))
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: '{{Session::get('error')}}',
+          
+        })
+    @endif
+</script>
 </html>

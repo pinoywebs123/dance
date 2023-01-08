@@ -11,21 +11,38 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="login">
+    <form class="login" action="{{route('forgot_check')}}" method="POST">
+     @csrf   
     <h1>Forgot your Password?</h1>
-    <div class="input">
-        <span  class="icon">
-            <ion-icon name="person-circle-outline"></ion-icon>
-        </span>
-        <input type="text" class="title" placeholder="Username">
-        </div>
+    
         <div class="input">
         <span  class="icon">
             <ion-icon name="mail-outline"></ion-icon>
         </span>
-        <input type="password" class="title" placeholder="UST Email">
+        <input type="email" class="title" placeholder="UST Email" name="email" required>
     </div>
-    <button type="submit"><a href="{{route('new_password')}}" target="left-side">Verify</a></button>
+    <button type="submit">Verify</button>
     </form>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+    @if(Session::has('success'))
+        Swal.fire({
+          icon: 'success',
+          title: 'Oops...',
+          text: '{{Session::get('success')}}',
+          
+        })
+    @endif
+
+
+    @if(Session::has('error'))
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: '{{Session::get('error')}}',
+          
+        })
+    @endif
+</script>
 </html>
