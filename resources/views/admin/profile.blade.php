@@ -17,7 +17,9 @@
                 <h1>{{Auth::user()->name}}</h1>
                 <span>Treasurer</span><br>
                 <button style="background-color: initial; border: none;"><a href="#" style="text-decoration: none; color: initial;">
-                    <span style="font-weight: bold;"><ion-icon name="create-outline"></ion-icon>&nbsp;Edit Profile</span>
+                    @if(Auth::user()->role_id != 1)
+                       <a href="{{route('admin_profile_edit')}}"><span style="font-weight: bold;"><ion-icon name="create-outline"></ion-icon>&nbsp;Edit Profile</span></a>
+                    @endif
                 </a></button>
             </div>
     </div>

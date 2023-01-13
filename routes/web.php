@@ -55,18 +55,33 @@ Route::group(['prefix'=> 'dashboard'], function(){
     Route::get('/home', [AdminController::class, 'home'])->name('admin_home');
     Route::get('/home2', [AdminController::class, 'home2'])->name('admin_home2');
     Route::get('/members', [AdminController::class, 'members'])->name('admin_members');
+
     Route::get('/coaches', [AdminController::class, 'coaches'])->name('admin_coaches');
     Route::get('/coach-info/{id}', [AdminController::class, 'coach_info'])->name('admin_coach_info');
     Route::get('/coach-status/{id}', [AdminController::class, 'coach_status'])->name('admin_coach_status');
-    Route::get('/dance-class', [AdminController::class, 'dance_class'])->name('admin_dance_class');
+    
     Route::get('/audition', [AdminController::class, 'audition'])->name('admin_audition');
     Route::get('/audition-info/{id}', [AdminController::class, 'audition_info'])->name('admin_audition_info');
     Route::get('/audition-pass/{id}', [AdminController::class, 'audition_pass'])->name('admin_audition_pass');
     Route::get('/audition-fail/{id}', [AdminController::class, 'audition_fail'])->name('admin_audition_fail');
+
     Route::get('/announcement-new', [AdminController::class, 'announcement_new'])->name('admin_announcement_new');
+    Route::get('/announcement-edit/{id}', [AdminController::class, 'announcement_edit'])->name('admin_announcement_edit');
+    Route::post('/announcement-update', [AdminController::class, 'announcement_update'])->name('admin_announcement_update');
     Route::post('/announcement-check', [AdminController::class, 'announcement_new_check'])->name('admin_announcement_new_check');
     Route::get('/announcement-archive/{id}', [AdminController::class, 'announcement_archive'])->name('admin_announcement_archive');
 
     Route::get('/profile', [AdminController::class, 'profile'])->name('admin_profile');
+    Route::get('/profile-edit', [AdminController::class, 'profile_edit'])->name('admin_profile_edit');
+    Route::post('/profile-update', [AdminController::class, 'profile_update'])->name('admin_profile_update');
+
+    Route::get('/dance-class', [AdminController::class, 'dance_class'])->name('admin_dance_class');
+    Route::get('/dance-class-create', [AdminController::class, 'dance_class_create'])->name('admin_dance_class_create');
+    Route::post('/dance-class-create-check', [AdminController::class, 'dance_class_create_check'])->name('admin_dance_class_create_check');
+    Route::get('/dance-class-delete/{id}', [AdminController::class, 'dance_class_delete'])->name('admin_dance_class_delete');
+    Route::get('/dance-class-edit/{id}', [AdminController::class, 'dance_class_edit'])->name('admin_dance_class_edit');
+    Route::post('/dance-class-update', [AdminController::class, 'dance_class_update'])->name('admin_dance_class_update');
+
+    Route::post('/audition-rating', [AdminController::class, 'audition_rating'])->name('admin_audition_rating');
 
 });

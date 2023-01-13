@@ -18,7 +18,8 @@ class CreateDanceClassesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('status_id');
             $table->string('topic');
-            $table->date('schedule_time');
+            $table->string('date');
+            $table->string('time');
             $table->string('link');
             $table->string('link_password')->nullable();
             $table->timestamps();

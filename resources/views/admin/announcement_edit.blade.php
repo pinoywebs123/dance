@@ -13,43 +13,23 @@
 <body>
     <div class="announcement">
         <h1>ANNOUNCEMENT</h1>
-
-            @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
-            <div class="import-items">
-                <a href="{{route('admin_announcement_new')}}" style="text-decoration: none; color:black">
-                    <span class="icon">
-                        <ion-icon name="add-circle-outline"></ion-icon>
+            <form class="uploading" method="POST" action="{{route('admin_announcement_update')}}">
+                @csrf
+                
+                <span class="icon">
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
                     </span>
-                    <span class="title">Add Announcement</span>
-                </a>
-            </div>
-
-            @endif
-
-             <br>
-              <br>
-               <br>
-           @foreach($anns as $an)
-           <div class="import-items">
-                <a href="{{route('admin_announcement_new')}}" style="text-decoration: none; color:black">
-                   
-                   
-
-                    <a href="{{$an->link}}">{{$an->link}}</a>
-                    <br>
-                    <p>{{$an->content}}</p>
-                    <br>
-                    @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
-                        <a href="{{route('admin_announcement_edit',$an->id)}}">Edit</a>
-                        <a href="{{route('admin_announcement_archive',$an->id)}}">Archive</a>
-
-                    @endif
-                </a>
-            </div>
-           @endforeach 
+                    <span class="title">&ensp;Add Upload photo/video.</span>  
+                    <input type="text" class="caption" placeholder="Enter Video Link" name="video_link" required value="{{$find->link}}">  
+                <br><br>
+                    
+                    <input type="text" class="caption" placeholder="Enter Content" name="content" value="{{$find->content}}">
+                    <input type="hidden" name="announcement_id" value="{{Request::segment(3)}}">
+                <div class="right-text"><br>
+                    <button type="submit">Done</button>
+                </div>    
+            </form>
     </div>
-
-
 
     <footer class="footer">
         <div class="circle">
