@@ -38,7 +38,9 @@
                     <a href="{{$an->link}}">{{$an->link}}</a>
                     <br>
                     <p>{{$an->content}}</p>
+
                     <br>
+                    <p>by: {{$an->user->name}}</p>
                     @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                         <a href="{{route('admin_announcement_edit',$an->id)}}">Edit</a>
                         <a href="{{route('admin_announcement_archive',$an->id)}}">Archive</a>

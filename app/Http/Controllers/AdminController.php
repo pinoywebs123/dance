@@ -90,7 +90,7 @@ class AdminController extends Controller
         $ann->link      = $request->video_link;
         $ann->content   = $request->content;
         $ann->save();
-        return redirect()->back()->with('success','Submit Successfully!');
+        return redirect()->route('admin_home2')->with('success','Submit Successfully!');
     }
 
     public function announcement_archive($id)
@@ -200,7 +200,7 @@ class AdminController extends Controller
         $dance->link            = $request->link;
         $dance->link_password   = $request->link_password;
         $dance->save();
-        return redirect()->back()->with('success','Dance Class Created Successfully!');
+        return redirect()->route('admin_dance_class')->with('success','Dance Class Created Successfully!');
     }
 
     public function dance_class_delete($id)
